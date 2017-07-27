@@ -30,6 +30,7 @@ contains(QT_VER_MAJ, 5) | greaterThan(QT_VER_MIN, 6) {
 unix {
     *-g++* {
         message("Using GCC compiler")
+        QMAKE_CXXFLAGS += -std=c++11
         QMAKE_CXXFLAGS += -pthread
         QMAKE_CXXFLAGS += -Wno-unused-parameter -Wno-unused-variable
     }

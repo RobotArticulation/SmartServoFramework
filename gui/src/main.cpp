@@ -25,6 +25,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QLibraryInfo>
+#include <QLocale>
 #include "qglobal.h"
 
 int main(int argc, char *argv[])
