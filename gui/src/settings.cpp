@@ -37,6 +37,10 @@
 #include <iostream>
 #include <fstream>
 
+#if defined(_WIN32) || defined(_WIN64)
+#include <direct.h>
+#endif
+
 using namespace rapidjson;
 
 Settings::Settings(QWidget *parent):
