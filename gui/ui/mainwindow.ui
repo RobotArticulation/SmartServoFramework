@@ -1958,19 +1958,19 @@ background: rgba(85, 200, 0, 128);</string>
   <customwidget>
    <class>tabSerial</class>
    <extends>QWidget</extends>
-   <header>../src/tabSerial.h</header>
+   <header>src/tabSerial.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>widgetSerialError</class>
    <extends>QWidget</extends>
-   <header>../src/widgetSerialError.h</header>
+   <header>src/widgetSerialError.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>widgetRegisterTable</class>
    <extends>QWidget</extends>
-   <header>../src/widgetRegisterTable.h</header>
+   <header>src/widgetRegisterTable.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
