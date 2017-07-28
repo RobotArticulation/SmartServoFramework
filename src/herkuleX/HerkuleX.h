@@ -23,13 +23,13 @@
 #ifndef HERKULEX_H
 #define HERKULEX_H
 
-#include "SerialPortQt.h"
-#include "SerialPortLinux.h"
-#include "SerialPortWindows.h"
-#include "SerialPortMacOS.h"
+#include "../SerialPortQt.h"
+#include "../SerialPortLinux.h"
+#include "../SerialPortWindows.h"
+#include "../SerialPortMacOS.h"
 
-#include "Utils.h"
-#include "ControlTables.h"
+#include "../Utils.h"
+#include "../ControlTables.h"
 #include "HerkuleXTools.h"
 
 #include <string>

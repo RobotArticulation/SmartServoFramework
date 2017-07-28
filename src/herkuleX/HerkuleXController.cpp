@@ -21,7 +21,7 @@
  */
 
 #include "HerkuleXController.h"
-#include "minitraces.h"
+#include "../minitraces.h"
 
 // C++ standard libraries
 #include <chrono>

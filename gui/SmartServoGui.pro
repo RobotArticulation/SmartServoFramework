@@ -70,8 +70,48 @@ win32 {
 }
 
 # SmartServoFramework sources
-SOURCES    += ../src/*.cpp
-HEADERS    += ../src/*.h
+SOURCES    += ../src/*.cpp \
+    ../src/dynamixel/Dynamixel.cpp \
+    ../src/dynamixel/DynamixelController.cpp \
+    ../src/dynamixel/DynamixelSimpleAPI.cpp \
+    ../src/dynamixel/DynamixelTools.cpp \
+    ../src/dynamixel/ServoAX.cpp \
+    ../src/dynamixel/ServoDynamixel.cpp \
+    ../src/dynamixel/ServoEX.cpp \
+    ../src/dynamixel/ServoMX.cpp \
+    ../src/dynamixel/ServoX.cpp \
+    ../src/dynamixel/ServoXL.cpp \
+    ../src/herkuleX/HerkuleX.cpp \
+    ../src/herkuleX/HerkuleXController.cpp \
+    ../src/herkuleX/HerkuleXSimpleAPI.cpp \
+    ../src/herkuleX/HerkuleXTools.cpp \
+    ../src/herkuleX/ServoDRS.cpp \
+    ../src/herkuleX/ServoHerkuleX.cpp
+HEADERS    += ../src/*.h \
+    ../src/Dynamixel/Dynamixel.h \
+    ../src/Dynamixel/DynamixelController.h \
+    ../src/Dynamixel/DynamixelSimpleAPI.h \
+    ../src/Dynamixel/DynamixelTools.h \
+    ../src/HerkuleX/HerkuleX.h \
+    ../src/HerkuleX/HerkuleXController.h \
+    ../src/HerkuleX/HerkuleXSimpleAPI.h \
+    ../src/HerkuleX/HerkuleXTools.h \
+    ../src/dynamixel/Dynamixel.h \
+    ../src/dynamixel/DynamixelController.h \
+    ../src/dynamixel/DynamixelSimpleAPI.h \
+    ../src/dynamixel/DynamixelTools.h \
+    ../src/dynamixel/ServoAX.h \
+    ../src/dynamixel/ServoDynamixel.h \
+    ../src/dynamixel/ServoEX.h \
+    ../src/dynamixel/ServoMX.h \
+    ../src/dynamixel/ServoX.h \
+    ../src/dynamixel/ServoXL.h \
+    ../src/herkuleX/HerkuleX.h \
+    ../src/herkuleX/HerkuleXController.h \
+    ../src/herkuleX/HerkuleXSimpleAPI.h \
+    ../src/herkuleX/HerkuleXTools.h \
+    ../src/herkuleX/ServoDRS.h \
+    ../src/herkuleX/ServoHerkuleX.h
 
 # GUI application sources
 SOURCES    += src/main.cpp \

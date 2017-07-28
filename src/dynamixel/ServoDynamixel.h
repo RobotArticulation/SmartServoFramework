@@ -23,7 +23,7 @@
 #ifndef SERVO_DYNAMIXEL_H
 #define SERVO_DYNAMIXEL_H
 
-#include "Servo.h"
+#include "../Servo.h"
 
 #include <string>
 #include <map>

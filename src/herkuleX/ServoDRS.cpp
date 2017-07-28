@@ -24,7 +24,7 @@
 
 #include "HerkuleX.h"
 #include "HerkuleXTools.h"
-#include "ControlTables.h"
+#include "../ControlTables.h"
 #include "ControlTablesHerkuleX.h"
 
 ServoDRS::ServoDRS(int herkulex_id, int herkulex_model, int control_mode):

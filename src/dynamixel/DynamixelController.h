@@ -15,19 +15,23 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this software. If not, see <http://www.gnu.org/licenses/lgpl-3.0.txt>.
  *
- * \file HerkuleXController.h
- * \date 25/08/2014
+ * \file DynamixelController.h
+ * \date 14/03/2014
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#ifndef HERKULEX_CONTROLLER_H
-#define HERKULEX_CONTROLLER_H
+#ifndef DYNAMIXEL_CONTROLLER_H
+#define DYNAMIXEL_CONTROLLER_H
 
-#include "ControllerAPI.h"
-#include "HerkuleX.h"
+#include "../ControllerAPI.h"
+#include "Dynamixel.h"
 
-#include "ServoHerkuleX.h"
-#include "ServoDRS.h"
+#include "ServoDynamixel.h"
+#include "ServoAX.h"
+#include "ServoEX.h"
+#include "ServoMX.h"
+#include "ServoXL.h"
+#include "ServoX.h"
 
 #include <vector>
 
@@ -36,11 +40,17 @@
  */
 
 /*!
- * \brief The HerkuleXController class, part of the ManagedAPI
+ * \brief The DynamixelController class, part of the ManagedAPI
  *
- * An controller can only be attached to ONE serial link at a time.
+ * A controller can only be attached to ONE serial link at a time.
+
+ * A "controller" provide a high level API to handle several servos at the same time.
+ * A client must instanciate servos objects and register them to a controller.
+ * Each servo object is synchronized with its hardware counterpart by the run()
+ * method, running in its own backgound thread.
+ *
  */
-class HerkuleXController: public HerkuleX, public ControllerAPI
+class DynamixelController: public Dynamixel, public ControllerAPI
 {
     //! Compute some internal settings (ackPolicy, maxId, protocolVersion) depending on current servo serie and serial device.
     void updateInternalSettings();
@@ -50,16 +60,22 @@ class HerkuleXController: public HerkuleX, public ControllerAPI
 
 public:
     /*!
-     * \brief HerkuleXController constructor.
+     * \brief DynamixelController constructor.
      * \param servoSerie: The servo serie to use with this controller. Only used to choose the right communication protocol.
      * \param ctrlFrequency: This is the synchronization frequency between the controller and the servos devices. Range is [1;120], default is 30.
      */
-    HerkuleXController(int ctrlFrequency = 30, int servoSerie = SERVO_DRS);
+    DynamixelController(int ctrlFrequency = 30, int servoSerie = SERVO_MX);
 
     /*!
-     * \brief HerkuleXController destructor. Stop the controller's thread and close the serial connection.
+     * \brief DynamixelController destructor. Stop the controller's thread and close the serial connection.
      */
-    ~HerkuleXController();
+    ~DynamixelController();
+
+    /*!
+     * \brief Change communication protocol version for this controller instance.
+     * \param protocol: The Dynamixel communication protocol to use. Can be v1 or v2.
+     */
+    void changeProtocolVersion(int protocol);
 
     /*!
      * \brief Connect the controller to a serial port, if the connection is successfull start a synchronization thread.
@@ -76,17 +92,20 @@ public:
     void disconnect();
 
     /*!
-     * \brief Scan a serial link for HerkuleX devices.
+     * \brief Scan a serial link for Dynamixel devices.
      * \param start: First ID to be scanned.
      * \param stop: Last ID to be scanned.
      *
      * Note: Be aware that calling this function will reset the current servoList.
      *
-     * This scanning function will ping every HerkuleX ID (from 'start' to 'stop',
+     * This scanning function will ping every Dynamixel ID (from 'start' to 'stop',
      * default [0;253]) on a serial link, and use the status response to detect
      * the presence of a device.
      * When a device is being scanned, its LED is briefly switched on.
      * Every servo found will be automatically registered to this controller.
+     *
+     * The current value 'protocolVersion' will be used. You can change it with
+     * the setProtocolVersion() function before calling autodetect().
      */
     void autodetect_internal(int start = 0, int stop = 253);
 
@@ -98,4 +117,4 @@ public:
 
 /** @}*/
 
-#endif // HERKULEX_CONTROLLER_H
+#endif // DYNAMIXEL_CONTROLLER_H

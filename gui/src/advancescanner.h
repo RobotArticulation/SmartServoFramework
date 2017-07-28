@@ -26,8 +26,8 @@
 #include <QMainWindow>
 #include <QTreeWidgetItem>
 
-#include "../../src/DynamixelSimpleAPI.h"
-#include "../../src/HerkuleXSimpleAPI.h"
+#include "../../src/dynamixel/DynamixelSimpleAPI.h"
+#include "../../src/herkuleX/HerkuleXSimpleAPI.h"
 
 namespace Ui {
 class AdvanceScanner;

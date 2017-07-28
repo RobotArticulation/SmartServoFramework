@@ -21,8 +21,8 @@
  */
 
 #include "ControlTables.h"
-#include "ControlTablesDynamixel.h"
-#include "ControlTablesHerkuleX.h"
+#include "dynamixel/ControlTablesDynamixel.h"
+#include "herkuleX/ControlTablesHerkuleX.h"
 #include "minitraces.h"
 
 // C++ standard libraries

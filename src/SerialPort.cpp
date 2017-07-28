@@ -21,8 +21,8 @@
  */
 
 #include "SerialPort.h"
-#include "DynamixelTools.h"
-#include "HerkuleXTools.h"
+#include "dynamixel/DynamixelTools.h"
+#include "herkuleX/HerkuleXTools.h"
 #include "minitraces.h"
 
 // Include the OS specific serialPortsScanner()

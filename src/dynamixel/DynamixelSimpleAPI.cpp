@@ -21,10 +21,10 @@
  */
 
 #include "DynamixelSimpleAPI.h"
-#include "ControlTables.h"
+#include "../ControlTables.h"
 #include "ControlTablesDynamixel.h"
-#include "ControlTablesHerkuleX.h"
-#include "minitraces.h"
+//#include "../ControlTablesHerkuleX.h"
+#include "../minitraces.h"
 
 // C++ standard libraries
 #include <cstring>
@@ -34,30 +34,30 @@ DynamixelSimpleAPI::DynamixelSimpleAPI(int servoSerie)
 {
     if (servoSerie != SERVO_UNKNOWN)
     {
-        if (servoSerie >= SERVO_HERKULEX)
-        {
-            ackPolicy = 1;
-            maxId = 253;
+//        if (servoSerie >= SERVO_HERKULEX)
+//        {
+//            ackPolicy = 1;
+//            maxId = 253;
 
-            protocolVersion = PROTOCOL_HKX;
-            servoSerie = SERVO_DRS;
+//            protocolVersion = PROTOCOL_HKX;
+//            servoSerie = SERVO_DRS;
 
-            if (servoSerie == SERVO_DRS_0402 || servoSerie == SERVO_DRS_0602)
-            {
-                ct = DRS0x02_control_table;
-            }
-            else if (servoSerie == SERVO_DRS_0401 || servoSerie == SERVO_DRS_0601)
-            {
-                ct = DRS0x01_control_table;
-            }
-            else
-            {
-                ct = DRS0101_control_table;
-            }
+//            if (servoSerie == SERVO_DRS_0402 || servoSerie == SERVO_DRS_0602)
+//            {
+//                ct = DRS0x02_control_table;
+//            }
+//            else if (servoSerie == SERVO_DRS_0401 || servoSerie == SERVO_DRS_0601)
+//            {
+//                ct = DRS0x01_control_table;
+//            }
+//            else
+//            {
+//                ct = DRS0101_control_table;
+//            }
 
-            TRACE_INFO(DAPI, "- Using HerkuleX communication protocol");
-        }
-        else //if (servos >= SERVO_DYNAMIXEL)
+//            TRACE_INFO(DAPI, "- Using HerkuleX communication protocol");
+//        }
+//        else //if (servos >= SERVO_DYNAMIXEL)
         {
             ackPolicy = 2;
             maxId = 252;

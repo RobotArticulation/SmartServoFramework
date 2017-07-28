@@ -21,7 +21,7 @@
  */
 
 #include "ServoHerkuleX.h"
-#include "minitraces.h"
+#include "../minitraces.h"
 
 #include "HerkuleX.h"
 #include "HerkuleXTools.h"

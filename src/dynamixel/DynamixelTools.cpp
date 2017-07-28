@@ -21,7 +21,7 @@
  */
 
 #include "DynamixelTools.h"
-#include "minitraces.h"
+#include "../minitraces.h"
 
 std::string dxl_get_model_name(const int model_number)
 {
@@ -136,7 +136,6 @@ void dxl_get_model_infos(const int model_number, int &servo_serie, int &servo_mo
         servo_serie = SERVO_AX;
         servo_model = SERVO_AX18A;
         break;
-
     case 0x0071:
         servo_serie = SERVO_DX;
         servo_model = SERVO_DX113;
@@ -231,7 +230,6 @@ void dxl_get_model_infos(const int model_number, int &servo_serie, int &servo_mo
         servo_serie = SENSOR_DYNAMIXEL;
         servo_model = SENSOR_IR_ARRAY;
         break;
-
     default:
         servo_serie = SERVO_UNKNOWN;
         servo_model = SERVO_UNKNOWN;

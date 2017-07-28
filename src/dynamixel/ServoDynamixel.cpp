@@ -21,7 +21,7 @@
  */
 
 #include "ServoDynamixel.h"
-#include "minitraces.h"
+#include "../minitraces.h"
 
 #include "Dynamixel.h"
 #include "DynamixelTools.h"

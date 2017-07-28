@@ -25,10 +25,10 @@
 #include "Dynamixel.h"
 #include "DynamixelTools.h"
 
-#include "ControlTables.h"
+#include "../ControlTables.h"
 #include "ControlTablesDynamixel.h"
 
-#include "minitraces.h"
+#include "../minitraces.h"
 
 ServoX::ServoX(int dynamixel_id, int dynamixel_model, int control_mode):
     ServoDynamixel(XMXH_control_table, dynamixel_id, dynamixel_model, control_mode)

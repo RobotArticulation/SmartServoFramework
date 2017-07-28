@@ -25,7 +25,7 @@
 #include "Dynamixel.h"
 #include "DynamixelTools.h"
 
-#include "ControlTables.h"
+#include "../ControlTables.h"
 #include "ControlTablesDynamixel.h"
 
 ServoEX::ServoEX(int dynamixel_id, int dynamixel_model, int control_mode):

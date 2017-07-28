@@ -23,7 +23,7 @@
 #ifndef SERVO_HERKULEX_H
 #define SERVO_HERKULEX_H
 
-#include "Servo.h"
+#include "../Servo.h"
 
 #include <string>
 #include <map>

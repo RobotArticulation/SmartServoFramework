@@ -20,9 +20,9 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "Dynamixel.h"
-#include "DynamixelTools.h"
-#include "ControlTablesDynamixel.h"
+#include "dynamixel/Dynamixel.h"
+#include "dynamixel/DynamixelTools.h"
+#include "dynamixel/ControlTablesDynamixel.h"
 
 #include "Servo.h"
 #include "minitraces.h"

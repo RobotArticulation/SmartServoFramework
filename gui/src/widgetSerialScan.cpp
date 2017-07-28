@@ -24,8 +24,8 @@
 #include "ui_widgetSerialScan.h"
 
 // SmartServoFramework
-#include "../../src/Dynamixel.h"
-#include "../../src/HerkuleX.h"
+#include "../../src/dynamixel/Dynamixel.h"
+#include "../../src/herkuleX/HerkuleX.h"
 
 #include <QDebug>
 

@@ -21,7 +21,7 @@
  */
 
 #include "HerkuleXTools.h"
-#include "minitraces.h"
+#include "../minitraces.h"
 
 std::string hkx_get_model_name(const int model_number)
 {

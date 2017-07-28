@@ -23,13 +23,13 @@
 #ifndef DYNAMIXEL_H
 #define DYNAMIXEL_H
 
-#include "SerialPortQt.h"
-#include "SerialPortLinux.h"
-#include "SerialPortWindows.h"
-#include "SerialPortMacOS.h"
+#include "../SerialPortQt.h"
+#include "../SerialPortLinux.h"
+#include "../SerialPortWindows.h"
+#include "../SerialPortMacOS.h"
 
-#include "Utils.h"
-#include "ControlTables.h"
+#include "../Utils.h"
+#include "../ControlTables.h"
 #include "DynamixelTools.h"
 
 #include <string>

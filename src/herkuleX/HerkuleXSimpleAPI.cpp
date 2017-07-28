@@ -21,10 +21,10 @@
  */
 
 #include "HerkuleXSimpleAPI.h"
-#include "ControlTables.h"
-#include "ControlTablesDynamixel.h"
+#include "../ControlTables.h"
+//#include "ControlTablesDynamixel.h"
 #include "ControlTablesHerkuleX.h"
-#include "minitraces.h"
+#include "../minitraces.h"
 
 // C++ standard libraries
 #include <cstring>
@@ -57,56 +57,56 @@ HerkuleXSimpleAPI::HerkuleXSimpleAPI(int servoSerie)
 
             TRACE_INFO(DAPI, "- Using HerkuleX communication protocol");
         }
-        else //if (servos >= SERVO_DYNAMIXEL)
-        {
-            ackPolicy = 2;
-            maxId = 252;
+//        else //if (servos >= SERVO_DYNAMIXEL)
+//        {
+//            ackPolicy = 2;
+//            maxId = 252;
 
-            if (servoSerie >= SERVO_PRO)
-            {
-                protocolVersion = PROTOCOL_DXLv2;
-                servoSerie = SERVO_PRO;
-                ct = PRO_control_table;
-            }
-            else if (servoSerie >= SERVO_X)
-            {
-                protocolVersion = PROTOCOL_DXLv2;
-                servoSerie = SERVO_X;
-                ct = XMXH_control_table;
-            }
-            else if (servoSerie >= SERVO_XL)
-            {
-                protocolVersion = PROTOCOL_DXLv2;
-                servoSerie = SERVO_XL;
-                ct = XL320_control_table;
-            }
-            else // SERVO AX to MX
-            {
-                // We set the servo serie to 'MX' which is the more capable of the Dynamixel v1 serie
-                protocolVersion = PROTOCOL_DXLv1;
-                servoSerie = SERVO_MX;
-                ct = MX_control_table;
+//            if (servoSerie >= SERVO_PRO)
+//            {
+//                protocolVersion = PROTOCOL_DXLv2;
+//                servoSerie = SERVO_PRO;
+//                ct = PRO_control_table;
+//            }
+//            else if (servoSerie >= SERVO_X)
+//            {
+//                protocolVersion = PROTOCOL_DXLv2;
+//                servoSerie = SERVO_X;
+//                ct = XMXH_control_table;
+//            }
+//            else if (servoSerie >= SERVO_XL)
+//            {
+//                protocolVersion = PROTOCOL_DXLv2;
+//                servoSerie = SERVO_XL;
+//                ct = XL320_control_table;
+//            }
+//            else // SERVO AX to MX
+//            {
+//                // We set the servo serie to 'MX' which is the more capable of the Dynamixel v1 serie
+//                protocolVersion = PROTOCOL_DXLv1;
+//                servoSerie = SERVO_MX;
+//                ct = MX_control_table;
 
-                if (serialDevice == SERIAL_USB2AX)
-                {
-                    // The USB2AX device uses the ID 253 for itself
-                    maxId = 252;
-                }
-                else
-                {
-                    maxId = 253;
-                }
-            }
+//                if (serialDevice == SERIAL_USB2AX)
+//                {
+//                    // The USB2AX device uses the ID 253 for itself
+//                    maxId = 252;
+//                }
+//                else
+//                {
+//                    maxId = 253;
+//                }
+//            }
 
-            if (protocolVersion == PROTOCOL_DXLv2)
-            {
-                TRACE_INFO(DAPI, "- Using Dynamixel communication protocol version 2");
-            }
-            else
-            {
-                TRACE_INFO(DAPI, "- Using Dynamixel communication protocol version 1");
-            }
-        }
+//            if (protocolVersion == PROTOCOL_DXLv2)
+//            {
+//                TRACE_INFO(DAPI, "- Using Dynamixel communication protocol version 2");
+//            }
+//            else
+//            {
+//                TRACE_INFO(DAPI, "- Using Dynamixel communication protocol version 1");
+//            }
+//        }
     }
     else
     {
