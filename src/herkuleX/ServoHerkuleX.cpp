@@ -20,12 +20,12 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "ServoHerkuleX.h"
-#include "../minitraces.h"
+#include "herkuleX/ServoHerkuleX.h"
+#include "herkuleX/HerkuleX.h"
+#include "herkuleX/HerkuleXTools.h"
+#include "herkuleX/ControlTablesHerkuleX.h"
 
-#include "HerkuleX.h"
-#include "HerkuleXTools.h"
-#include "ControlTablesHerkuleX.h"
+#include "minitraces.h"
 
 #include <cstring>
 

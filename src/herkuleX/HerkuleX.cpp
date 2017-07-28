@@ -20,8 +20,8 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "HerkuleX.h"
-#include "../minitraces.h"
+#include "herkuleX/HerkuleX.h"
+#include "minitraces.h"
 
 // C++ standard libraries
 #include <cstdio>

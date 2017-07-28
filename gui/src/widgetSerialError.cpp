@@ -24,11 +24,11 @@
 #include "ui_widgetSerialError.h"
 
 // SmartServoFramework
-#include "../../src/dynamixel/DynamixelController.h"
-#include "../../src/herkuleX/HerkuleXController.h"
-#include "../../src/dynamixel/DynamixelTools.h"
-#include "../../src/herkuleX/HerkuleXTools.h"
-#include "../../src/Servo.h"
+#include "dynamixel/DynamixelController.h"
+#include "herkuleX/HerkuleXController.h"
+#include "dynamixel/DynamixelTools.h"
+#include "herkuleX/HerkuleXTools.h"
+#include "Servo.h"
 
 widgetSerialError::widgetSerialError(QWidget *parent) :
     QWidget(parent),

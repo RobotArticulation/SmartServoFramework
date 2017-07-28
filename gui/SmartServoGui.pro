@@ -69,6 +69,8 @@ win32 {
     }
 }
 
+INCLUDEPATH = "$$PWD/../inc"
+
 # SmartServoFramework sources
 SOURCES    += ../src/*.cpp \
     ../src/dynamixel/Dynamixel.cpp \
@@ -87,31 +89,31 @@ SOURCES    += ../src/*.cpp \
     ../src/herkuleX/HerkuleXTools.cpp \
     ../src/herkuleX/ServoDRS.cpp \
     ../src/herkuleX/ServoHerkuleX.cpp
-HEADERS    += ../src/*.h \
-    ../src/Dynamixel/Dynamixel.h \
-    ../src/Dynamixel/DynamixelController.h \
-    ../src/Dynamixel/DynamixelSimpleAPI.h \
-    ../src/Dynamixel/DynamixelTools.h \
-    ../src/HerkuleX/HerkuleX.h \
-    ../src/HerkuleX/HerkuleXController.h \
-    ../src/HerkuleX/HerkuleXSimpleAPI.h \
-    ../src/HerkuleX/HerkuleXTools.h \
-    ../src/dynamixel/Dynamixel.h \
-    ../src/dynamixel/DynamixelController.h \
-    ../src/dynamixel/DynamixelSimpleAPI.h \
-    ../src/dynamixel/DynamixelTools.h \
-    ../src/dynamixel/ServoAX.h \
-    ../src/dynamixel/ServoDynamixel.h \
-    ../src/dynamixel/ServoEX.h \
-    ../src/dynamixel/ServoMX.h \
-    ../src/dynamixel/ServoX.h \
-    ../src/dynamixel/ServoXL.h \
-    ../src/herkuleX/HerkuleX.h \
-    ../src/herkuleX/HerkuleXController.h \
-    ../src/herkuleX/HerkuleXSimpleAPI.h \
-    ../src/herkuleX/HerkuleXTools.h \
-    ../src/herkuleX/ServoDRS.h \
-    ../src/herkuleX/ServoHerkuleX.h
+HEADERS    += ../inc/*.h \
+    ../inc/Dynamixel/Dynamixel.h \
+    ../inc/Dynamixel/DynamixelController.h \
+    ../inc/Dynamixel/DynamixelSimpleAPI.h \
+    ../inc/Dynamixel/DynamixelTools.h \
+    ../inc/HerkuleX/HerkuleX.h \
+    ../inc/HerkuleX/HerkuleXController.h \
+    ../inc/HerkuleX/HerkuleXSimpleAPI.h \
+    ../inc/HerkuleX/HerkuleXTools.h \
+    ../inc/dynamixel/Dynamixel.h \
+    ../inc/dynamixel/DynamixelController.h \
+    ../inc/dynamixel/DynamixelSimpleAPI.h \
+    ../inc/dynamixel/DynamixelTools.h \
+    ../inc/dynamixel/ServoAX.h \
+    ../inc/dynamixel/ServoDynamixel.h \
+    ../inc/dynamixel/ServoEX.h \
+    ../inc/dynamixel/ServoMX.h \
+    ../inc/dynamixel/ServoX.h \
+    ../inc/dynamixel/ServoXL.h \
+    ../inc/herkuleX/HerkuleX.h \
+    ../inc/herkuleX/HerkuleXController.h \
+    ../inc/herkuleX/HerkuleXSimpleAPI.h \
+    ../inc/herkuleX/HerkuleXTools.h \
+    ../inc/herkuleX/ServoDRS.h \
+    ../inc/herkuleX/ServoHerkuleX.h
 
 # GUI application sources
 SOURCES    += src/main.cpp \

@@ -20,12 +20,12 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "ServoDynamixel.h"
-#include "../minitraces.h"
+#include "dynamixel/ServoDynamixel.h"
+#include "dynamixel/Dynamixel.h"
+#include "dynamixel/DynamixelTools.h"
+#include "dynamixel/ControlTablesDynamixel.h"
 
-#include "Dynamixel.h"
-#include "DynamixelTools.h"
-#include "ControlTablesDynamixel.h"
+#include "minitraces.h"
 
 #include <thread>
 #include <cstring>

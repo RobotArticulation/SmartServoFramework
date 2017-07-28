@@ -20,8 +20,8 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "HerkuleXTools.h"
-#include "../minitraces.h"
+#include "herkuleX/HerkuleXTools.h"
+#include "minitraces.h"
 
 std::string hkx_get_model_name(const int model_number)
 {

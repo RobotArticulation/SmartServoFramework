@@ -20,11 +20,10 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "HerkuleXSimpleAPI.h"
-#include "../ControlTables.h"
-//#include "ControlTablesDynamixel.h"
-#include "ControlTablesHerkuleX.h"
-#include "../minitraces.h"
+#include "herkuleX/HerkuleXSimpleAPI.h"
+#include "herkuleX/ControlTablesHerkuleX.h"
+#include "ControlTables.h"
+#include "minitraces.h"
 
 // C++ standard libraries
 #include <cstring>

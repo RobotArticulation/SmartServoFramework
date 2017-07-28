@@ -20,15 +20,12 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "ServoX.h"
-
-#include "Dynamixel.h"
-#include "DynamixelTools.h"
-
-#include "../ControlTables.h"
-#include "ControlTablesDynamixel.h"
-
-#include "../minitraces.h"
+#include "dynamixel/ServoX.h"
+#include "dynamixel/Dynamixel.h"
+#include "dynamixel/DynamixelTools.h"
+#include "dynamixel/ControlTablesDynamixel.h"
+#include "ControlTables.h"
+#include "minitraces.h"
 
 ServoX::ServoX(int dynamixel_id, int dynamixel_model, int control_mode):
     ServoDynamixel(XMXH_control_table, dynamixel_id, dynamixel_model, control_mode)

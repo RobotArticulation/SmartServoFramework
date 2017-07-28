@@ -20,8 +20,8 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "HerkuleXController.h"
-#include "../minitraces.h"
+#include "herkuleX/HerkuleXController.h"
+#include "minitraces.h"
 
 // C++ standard libraries
 #include <chrono>

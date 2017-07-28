@@ -22,7 +22,7 @@
 
 #include "tabSerial.h"
 #include "ui_tabSerial.h"
-#include "../src/Utils.h"
+#include "Utils.h"
 
 tabSerial::tabSerial(QWidget *parent) :
     QWidget(parent),

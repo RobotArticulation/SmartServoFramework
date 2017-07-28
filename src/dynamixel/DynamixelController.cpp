@@ -20,8 +20,8 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "DynamixelController.h"
-#include "../minitraces.h"
+#include "dynamixel/DynamixelController.h"
+#include "minitraces.h"
 
 // C++ standard libraries
 #include <chrono>

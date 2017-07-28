@@ -20,12 +20,12 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "ServoDRS.h"
+#include "herkuleX/ServoDRS.h"
+#include "herkuleX/HerkuleX.h"
+#include "herkuleX/HerkuleXTools.h"
+#include "herkuleX/ControlTablesHerkuleX.h"
+#include "ControlTables.h"
 
-#include "HerkuleX.h"
-#include "HerkuleXTools.h"
-#include "../ControlTables.h"
-#include "ControlTablesHerkuleX.h"
 
 ServoDRS::ServoDRS(int herkulex_id, int herkulex_model, int control_mode):
     ServoHerkuleX(getRegisterTable(hkx_get_servo_model(herkulex_model)), herkulex_id, herkulex_model, control_mode)

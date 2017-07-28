@@ -20,8 +20,8 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "DynamixelTools.h"
-#include "../minitraces.h"
+#include "dynamixel/DynamixelTools.h"
+#include "minitraces.h"
 
 std::string dxl_get_model_name(const int model_number)
 {

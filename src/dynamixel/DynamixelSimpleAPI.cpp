@@ -20,11 +20,10 @@
  * \author Emeric Grange <emeric.grange@gmail.com>
  */
 
-#include "DynamixelSimpleAPI.h"
-#include "../ControlTables.h"
-#include "ControlTablesDynamixel.h"
-//#include "../ControlTablesHerkuleX.h"
-#include "../minitraces.h"
+#include "dynamixel/DynamixelSimpleAPI.h"
+#include "dynamixel/ControlTablesDynamixel.h"
+#include "ControlTables.h"
+#include "minitraces.h"
 
 // C++ standard libraries
 #include <cstring>
