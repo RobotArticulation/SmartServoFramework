@@ -88,7 +88,11 @@ SOURCES    += ../src/*.cpp \
     ../src/herkuleX/HerkuleXSimpleAPI.cpp \
     ../src/herkuleX/HerkuleXTools.cpp \
     ../src/herkuleX/ServoDRS.cpp \
-    ../src/herkuleX/ServoHerkuleX.cpp
+    ../src/herkuleX/ServoHerkuleX.cpp \
+    ../src/mercury/Mercury.cpp \
+    ../src/mercury/ServoV1.cpp \
+    ../src/mercury/ServoMercury.cpp \
+    ../src/mercury/MercuryTools.cpp
 HEADERS    += ../inc/*.h \
     ../inc/Dynamixel/Dynamixel.h \
     ../inc/Dynamixel/DynamixelController.h \
@@ -113,7 +117,15 @@ HEADERS    += ../inc/*.h \
     ../inc/herkuleX/HerkuleXSimpleAPI.h \
     ../inc/herkuleX/HerkuleXTools.h \
     ../inc/herkuleX/ServoDRS.h \
-    ../inc/herkuleX/ServoHerkuleX.h
+    ../inc/herkuleX/ServoHerkuleX.h \
+    ../inc/mercury/ControlTablesMercury.h \
+    ../inc/mercury/Mercury.h \
+    ../inc/mercury/MercuryController.h \
+    ../inc/mercury/MercurySimpleAPI.h \
+    ../inc/mercury/MercuryTools.h \
+    ../inc/mercury/MercuryV1.h \
+    ../inc/mercury/ServoMercury.h \
+    ../inc/mercury/ServoV1.h
 
 # GUI application sources
 SOURCES    += src/main.cpp \

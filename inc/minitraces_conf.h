@@ -91,6 +91,7 @@ enum TraceModule_e
     DAPI,
     CAPI,
     DXL,
+    MCY,
     HKX,
     TOOLS,
     SERIAL,

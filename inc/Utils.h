@@ -62,11 +62,12 @@
  */
 enum ServoProtocol
 {
-    PROTOCOL_UNKNOWN= 0,    //!<
+    PROTOCOL_UNKNOWN    = 0,
 
-    PROTOCOL_DXLv1  = 1,    //!<
-    PROTOCOL_DXLv2  = 2,    //!<
-    PROTOCOL_HKX    = 3,    //!<
+    PROTOCOL_DXLv1      = 1,
+    PROTOCOL_DXLv2      = 2,
+    PROTOCOL_HKX        = 3,
+    PROTOCOL_MCY    = 4
 };
 
 /*!
@@ -212,6 +213,10 @@ enum ServoDevices_e
             SERVO_DRS_0402  = 214,
             SERVO_DRS_0601  = 215,
             SERVO_DRS_0602  = 216,
+
+    SERVO_MERCURY            = 15,
+        SERVO_ARCADIA        = 16,
+            SERVO_ARCADIA_01 = 17
 };
 
 /*!
